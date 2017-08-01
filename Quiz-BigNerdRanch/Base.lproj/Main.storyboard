@@ -36,10 +36,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGa-pq-X9E">
                                 <rect key="frame" x="138" y="108" width="98" height="30"/>
                                 <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZzP-A9-yTu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWH-Hd-Lcj">
                                 <rect key="frame" x="141" y="375" width="93" height="30"/>
                                 <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUE-wE-iKe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,6 +60,10 @@
                             <constraint firstItem="SWH-Hd-Lcj" firstAttribute="top" secondItem="Zjm-3I-I3P" secondAttribute="bottom" constant="31" id="zZr-PT-9Cn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="Zjm-3I-I3P" id="nLa-1b-UN6"/>
+                        <outlet property="questionLabel" destination="we4-uI-3wF" id="i1O-d0-hwp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
