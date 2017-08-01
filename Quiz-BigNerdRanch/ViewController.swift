@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        questionLabel.text = questions[currentQuestionIndex]
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +41,21 @@ class ViewController: UIViewController {
     
     @IBAction func showNextQuestion(_ sender: UIButton) {
         
+        currentQuestionIndex += 1
+        if currentQuestionIndex == questions.count {
+            currentQuestionIndex = 0
+        }
+        
+        let question: String = questions[currentQuestionIndex]
+        questionLabel.text = question
+        answerLabel.text = "???"
+        
     }
     
     @IBAction func showAnswer(_ sender: UIButton) {
         
+        let answer = answers[currentQuestionIndex]
+        answerLabel.text = answer
     }
 
 
